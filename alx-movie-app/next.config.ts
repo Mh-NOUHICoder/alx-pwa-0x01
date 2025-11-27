@@ -9,20 +9,28 @@
 //   reactStrictMode: true,
 // };
 
-// export default nextConfig;
+import type { NextConfig } from "next";
+import type { Configuration } from "webpack";
 import withPWAInit from "@ducanh2912/next-pwa";
 
 const withPWA = withPWAInit({
   dest: "public",
 });
 
-const nextConfig = {
+const nextConfig: NextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ["image.tmdb.org"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "image.tmdb.org",
+      },
+    ],
   },
-  // ✅ force Webpack instead of Turbopack
-  
+  webpack: (config: Configuration) => {
+    // you can safely modify config here
+    return config;
+  },
 };
 
 export default withPWA(nextConfig);
