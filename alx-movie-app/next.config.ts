@@ -21,7 +21,7 @@ const withPWA = withPWAInit({
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['m.media-amazon.com'],
+    // domains: ['m.media-amazon.com'],
     domains: ['image.tmdb.org'], // allow TMDB images
   },
 };
