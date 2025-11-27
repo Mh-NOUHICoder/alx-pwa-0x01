@@ -12,21 +12,17 @@
 // export default nextConfig;
 import withPWAInit from "@ducanh2912/next-pwa";
 
-/** @type {import('next').NextConfig} */
-
 const withPWA = withPWAInit({
-  dest: 'public'
-})
+  dest: "public",
+});
 
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    // domains: ['m.media-amazon.com'],
-    domains: ['image.tmdb.org'], // allow TMDB images
+    domains: ["image.tmdb.org"],
   },
+  // ✅ force Webpack instead of Turbopack
+  
 };
 
-export default withPWA({
-  ...nextConfig
-})
-
+export default withPWA(nextConfig);
