@@ -39,7 +39,7 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="text-center mb-12">
         <h1 className="text-4xl font-bold mb-3 text-white">
-          🎬 Welcome to <span className="text-indigo-400">Go.Gym Movies</span>
+          🎬 Welcome to <span className="text-indigo-400">MovieLand Movies</span>
         </h1>
         <p className="text-gray-400 max-w-xl mx-auto">
           Explore, rate, and discover your favorite movies with style.
